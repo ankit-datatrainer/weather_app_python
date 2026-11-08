@@ -1,0 +1,12 @@
+Question 1. Write a Python program to take 5 words from the user using a for loop and print only the words that start with a vowel. Also count how many such words were entered.
+
+Question 2. Write a Python program to take a sentence from the user and use a for loop to count how many words have more than 4 characters. Print the total count.
+
+Question 3. Write a Python program to take a string from the user and use a while loop to print the characters one by one until the letter "a" is found. Stop printing after "a" is found.
+
+Question 4. Write a Python program to take 5 strings from the user using a for loop and print "Valid" when the string contains only letters, otherwise print "Invalid".
+
+Question 5. Write a Python program to take a word from the user and use a while loop to check whether the word is a palindrome by comparing characters from both ends.
+
+Question 6. Write a Python program to take a sentence from the user and use a for loop to count uppercase letters, lowercase letters, and digits. Print the largest count among the three.
+Displaying Homework.txt.

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyPulse Weather</title>
+
+    <meta name="description" content="A clean Flask and OpenWeather current weather application.">
+
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+
+<body>
+
+    <main class="app-shell">
+
+        <section class="weather-card">
+
+            <header class="topbar">
+
+                <div>
+                    <p class="eyebrow">FLASK WEATHER PROJECT</p>
+
+                    <h1>SkyPulse</h1>
+
+                    <p class="subtitle">Current Weather, kept simple.</p>
+                </div>
+
+                <div class="status-dot" title="Weather API connection"></div>
+
+            </header>
+
+            <div class="search-section">
+
+                <form id="weather-form" class="search-form">
+                    <label for="city" class="sr-only">City Name</label>
+
+                    <input id="city" name="city" placeholder="Search a city......" autocomplete="off" type="text"
+                        required>
+
+                    <button type="submit" id="search-button">
+                        <span id="button-text">Search</span>
+                    </button>
+                </form>
+
+
+                <div class="quick-cities">
+                    <button type="button" class="city-chip" data-city="Delhi">
+                        Delhi
+                    </button>
+
+                    <button type="button" class="city-chip" data-city="Dubai">
+                        Dubai
+                    </button>
+
+                    <button type="button" class="city-chip" data-city="New York">
+                        New York
+                    </button>
+
+                    <button type="button" class="city-chip" data-city="Tokyo">
+                        Tokyo
+                    </button>
+                </div>
+            </div>
+
+            <!-- Error and status message -->
+            <div id="message" class="message" role="status" aria-live="polite"></div>
+
+            <section id="weather-panel" class="weather-panel hidden">
+
+                <div class="location-row">
+                    <div>
+                        <p class="label">
+                            CURRENT LOCATION
+                        </p>
+
+                        <h2 id="location-name">Delhi, IN</h2>
+                    </div>
+
+                    <span class="live-badge">LIVE</span>
+                </div>
+
+                <!-- Main Temperature -->
+
+                <div class="hero-weather">
+                    <div class="temperature-wrap">
+
+                        <img src="" alt="Weather Condition" class="weather-icon" id="weather-icon">
+
+
+                        <div>
+                            <div class="temperature">
+
+                                <span id="temperature">
+                                    --
+                                </span>
+
+                                <span class="degree">
+                                    °C
+                                </span>
+                            </div>
+
+                            <p id="description" class="description">--</p>
+
+                            <p class="feels">Feels like <span id="feels-like">--</span>°C</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Weather statistics -->
+
+                <div class="stats-grid">
+                    <article class="stat-card">
+
+                        <span class="stat-icon">
+                            💧
+                        </span>
+
+                        <div>
+                            <p class="stat-label">HUMIDITY</p>
+
+                            <p class="stat-value">
+                                <span id="humidity">--</span>%
+                            </p>
+                        </div>
+
+                    </article>
+
+                    <article class="stat-card">
+                        <span class="stat-icon">💨</span>
+                        <div>
+                            <p class="stat-label">WIND</p>
+                            <p class="stat-value"><span id="wind-speed">--</span> m/s</p>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+</body>
+
+</html>
